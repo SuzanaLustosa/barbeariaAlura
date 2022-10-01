@@ -1,0 +1,299 @@
+
+header {
+	background: #BBBBBB;
+	padding: 20px 0;
+}
+
+body {
+	font-family: "Montserrat", sans-serif; /*"fonte", alternativa;*/
+}
+
+.caixa {
+	position: relative; /*a navegação ficará em posição absoluta em relação a caixa, pois ela foi 'descolada' do navegador*/
+	width: 940px; /*largura padrão web*/
+	margin: auto;
+}
+
+nav {
+	position: absolute; /*absoluto em relação a página, o ponto inicial é referente ao que o desenvolvedor determina no navegador*/
+	top: 110px; /*metade da altura do logo*/
+	right: 0;
+}
+
+nav li {
+	display: inline;
+	margin: 0 0 0 15px;
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none
+}
+
+nav a:hover {  /*tag:estado*/
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+.produtos {
+	width: 940px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.produtos li {
+	display: inline-block; /*ocupam o esoaço do seu conteúdo mas na mesma linha*/
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border: 2px solid #000000; 
+	border-radius: 10px
+}
+
+.produtos li:hover {
+	border-color: #C78C19;
+}
+
+.produtos li:active {
+	border-color: #088C19;
+}
+
+.produtos li:hover h2 { /*o h2 quando o mouse estiver por cima do li dos produtos*/
+	font-size: 32px;
+}
+
+.produtos h2 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.produto-descricao {
+	font-size: 18px	
+}
+
+.produto-preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin: 10px 0 0;
+}
+
+footer {
+	text-align: center;
+	background: url("bg.jpg");
+	padding: 40px 0;
+}
+
+.copyright {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+main {
+}
+
+form {
+	margin: 40px 20px;
+}
+
+form label, form legend {
+	display: block;
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+
+.input-padrao {
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 50%;
+}
+
+.checkbox {
+	margin: 20px 0;
+}
+
+.enviar {
+	width: 40%;
+	padding: 15px 0;
+	background: orange;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	transition: 1s all;
+	cursor: pointer;
+}
+
+.enviar:hover {
+	background: darkorange;
+	transform: scale(1.2); /*20%*/
+}
+
+table {
+	margin: 20px 0 40px 20px; /*cima-direita-baixo-esquerda*/
+}
+
+thead {
+	background: #555555;
+	font-weight: bold;
+}
+
+td, th {
+	border: 1px solid #000000;
+	padding: 8px 15px;
+}
+
+
+
+/*conteúdo home*/
+.banner {
+	width: 100%;
+}
+
+.titulo-principal {
+	text-align: center;
+	font-size: 2em;
+	margin: 0 0 1em; /*espaço proporcional, para baixo, ao tamanho da fonte*/
+	clear: left;
+	font-weight: bold;
+	/*color: rgba(0,0,0,0.3);*/
+}
+
+.principal {
+	padding: 3em 0;
+	background: #FFFFFF;
+	width: 940px;
+	margin: 0 auto;
+}
+
+.principal p {
+	margin: 0 0 1em;
+}
+
+.principal strong {
+	font-weight: bold;
+}
+
+.principal em {
+	font-style: italic;
+}
+
+.utensilios {
+	width: 120px;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.mapa {
+	padding: 3em 0;
+	background: linear-gradient(#FEFEFE, #888888)
+}
+
+.mapa p {
+	margin: 0 0 2em;
+	text-align: center;
+}
+
+.mapa-conteudo {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.beneficios {
+	padding: 3em 0;
+	background: #888888;
+}
+
+.conteudo-beneficios {
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios {
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.itens {
+	line-height: 1.5;	
+}
+
+.itens:first-child {
+	font-weight: bold;
+}
+
+.itens:before {
+	content: "🟊"
+}
+
+.imagem-beneficios {
+	width: 60%;
+	opacity: 1;
+	transition: 400ms;
+	box-shadow: 10px 10px 10px #000000; /*box-shadow: eixo x eixo y blur intensidade da borda cor*/ 
+	/*os valores nos eixos podem ser negativos*/
+	/*box-shadow: inset -> sombra interna*/
+}
+
+.imagem-beneficios:hover {
+
+	opacity: 0.7;
+}
+
+.video {
+	width: 560px;
+	margin: 2em auto; 
+}
+
+/*
+SELETORES AVANÇADOS
+
+main > p {
+	filhos diretos
+}
+
+img + p {
+	primeiro parágrafo após imagem
+}
+
+img ~ p {
+	todos os parágrafos após imagens
+} 
+
+.principal p:not(#missao) -> todos os parágrafos com classe principal que NÃO tem classe missão
+
+
+CALCULO
+width {
+	calc(40% - 26px)
+}
+*/
+
+/*perguntar ao navegador o tamanho da tela do dispositivo*/
+/*entregar a dispositivos com tela de, no máximo, 480px o estilo abaixo*/
+@media screen and (max-width: 480px) {
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+		width: auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	nav {
+		position: static;
+	}
+
+	.lista-beneficios, .imagem-beneficios {
+		width: 100%;
+	}
+}
